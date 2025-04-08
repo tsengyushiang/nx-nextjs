@@ -1,3 +1,23 @@
+# Setup Project
+
+To start a development environment using Docker, run:
+
+```sh
+sudo docker run -it --rm -w /app -v ./:/app -p 3000:3000 node:20 bash
+```
+
+To create a new Nx workspace with Next.js using Yarn as the package manager, run:
+
+```sh
+npx create-nx-workspace@latest --preset=next --packageManager=yarn
+```
+
+To generate a new shared component library in your Nx workspace, run:
+
+```sh
+nx g @nx/next:lib libs/components
+```
+
 # Test
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>

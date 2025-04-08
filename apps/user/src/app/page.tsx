@@ -1,10 +1,5 @@
 'use client';
-import styled from 'styled-components';
-
-const StyledPage = styled.div`
-  .page {
-  }
-`;
+import { StyledPage } from "@test/components"
 
 export default function Index() {
   /*
