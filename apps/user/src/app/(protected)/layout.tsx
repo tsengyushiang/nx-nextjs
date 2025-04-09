@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
+import Menu from './Menu';
 
 export default async function RootLayout({
   children,
@@ -13,5 +14,5 @@ export default async function RootLayout({
     redirect('/login');
   }
 
-  return children;
+  return <Menu>{children}</Menu>;
 }

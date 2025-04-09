@@ -12,7 +12,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body style={{ margin: 0, height: '100dvh' }}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>

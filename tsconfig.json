@@ -8,6 +8,16 @@
     },
     {
       "path": "./libs/components"
+    },
+    {
+      "path": "./apps/docs"
     }
-  ]
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "moduleResolution": "node10",
+      "customConditions": null
+    }
+  }
 }
