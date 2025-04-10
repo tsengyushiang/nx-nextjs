@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
+import svgr from 'vite-plugin-svgr';
 import * as path from 'path';
 
 export default defineConfig(() => ({
@@ -9,9 +10,11 @@ export default defineConfig(() => ({
   cacheDir: '../../node_modules/.vite/libs/components',
   plugins: [
     react(),
+    svgr({ include: '**/*.svg' }),
     dts({
       entryRoot: 'src',
       tsconfigPath: path.join(__dirname, 'tsconfig.lib.json'),
+      rollupTypes: true,
     }),
   ],
   // Uncomment this if you are using workers.

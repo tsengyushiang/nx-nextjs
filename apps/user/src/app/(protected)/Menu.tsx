@@ -1,5 +1,15 @@
 'use client';
 
-import { StyledPage } from '@test/components';
+import { Page, Icon } from '@test/components';
+import { ReactNode } from 'react';
 
-export default StyledPage;
+const Menu = ({ children }: { children: ReactNode }) => {
+  return (
+    <Page>
+      {children}
+      <Icon />
+    </Page>
+  );
+};
+
+export default Menu;

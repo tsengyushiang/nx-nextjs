@@ -17,8 +17,22 @@ const nextConfig = {
     // For other options, see https://styled-components.com/docs/tooling#babel-plugin
     styledComponents: true,
   },
-  
+
   output: 'standalone',
+
+  webpack(config) {
+    // Add SVG handling with SVGR to Webpack
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: [
+        {
+          loader: '@svgr/webpack',
+        },
+      ],
+    });
+
+    return config;
+  },
 };
 
 const plugins = [
