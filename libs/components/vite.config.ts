@@ -32,7 +32,7 @@ export default defineConfig(() => ({
     },
     lib: {
       // Could also be a dictionary or array of multiple entry points.
-      entry: 'src/index.ts',
+      entry: ['src/index.ts', 'src/hooks.ts'],
       name: '@test/components',
       fileName: 'index',
       // Change this to the formats you want to support.
@@ -42,6 +42,9 @@ export default defineConfig(() => ({
     rollupOptions: {
       // External packages that should not be bundled into your library.
       external: ['react', 'react-dom', 'react/jsx-runtime'],
+      output: {
+        entryFileNames: () => `[name].js`,
+      },
     },
   },
 }));
